@@ -20,6 +20,6 @@
 #  copy: src="{{job}}" dest=/usr/local/tomcat/apache-tomcat-8.5.33/webapps mode=0755 owner=root force=yes
 - name: downlaod the war file to nexus repository
   get_url: 
-         url: http://192.168.56.22:8081/nexus/content/repositories/tourguide1/TourGuide/TourGuide/1.5.1/TourGuide-1.5.1.war
+         url: http://192.168.56.22:8081/nexus/content/repositories/tourguide/TourGuide/TourGuide/1.5.1/TourGuide-1.5.1.war
          dest: /usr/local/tomcat/apache-tomcat-8.5.33/webapps
   notify: restart tomcat
